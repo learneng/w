@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Styles</title>
+
+    <style>
+        :root{
+            --radius: -200px;
+            --diameter: 400px;
+        }
+        .main-container{
+            position: relative;
+            width: var(--diameter);
+            height: var(--diameter);
+            background-color: white;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 100px auto;
+        }
+        .circle{
+            width: var(--diameter);
+            height: var(--diameter);
+            position: absolute;
+            border-radius: 50%;
+        }
+        .one{
+            top: var(--radius);
+            left: var(--radius);
+            background-color: #ccc;
+        }
+        .two{
+            top: var(--radius);
+            right: var(--radius);
+            background-color: rgb(52, 52, 52);
+        }
+        .three{
+            bottom:var(--radius);
+            left: var(--radius);
+            background-color: rgb(120, 120, 120);
+        }
+        .four{
+            bottom: var(--radius);
+            right: var(--radius);
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 9B</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h2,
+      h3,
+      p {
+        text-align: center;
+      }
+
+      span.left-most {
+        padding-left: 42vw;
+      }
+
+      div.box {
+        padding-top: 200px;
+      }
+
+      span.title{
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Hello, <span id="name"></span></h2>
+      <h3 id="greetings"></h3>
+      <span class="left-most title">Date: </span> <span id="date"></span>
+      <span class="title">Time:</span>
+      <span id="time"></span>
+      <p id="quotes"></p>
+    </div>
+    <!-- JavaScript -->
+    <script>
+      var name = prompt("Enter Your Name: ");
+      document.getElementById("name").innerHTML = name;
+
+      var date = new Date().getDate();
+      var month = new Date().getMonth() + 1;
+      var year = new Date().getFullYear();
+
+      document.getElementById("date").innerHTML =
+        date + "/" + month + "/" + year;
+
+      function Time() {
+        var hours = new Date().getHours();
+        var minutes = new Date().getMinutes();
+        var secs = new Date().getSeconds();
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        secs = secs < 10 ? "0" + secs : secs;
+
+        document.getElementById("time").innerHTML =
+          hours + ":" + minutes + ":" + secs;
+        let t = setTimeout(function () {
+          Time();
+        }, 1000);
+        var greet = document.getElementById("greetings");
+        var quote = document.getElementById("quotes");
+        if (hours >= 5 && hours < 12) {
+          greet.innerHTML = "Good Morning";
+          quote.innerHTML = "EAT BREAKFAST";
+        } else if (hours >= 12 && hours < 17) {
+          greet.innerHTML = "Good Afternoon";
+          quote.innerHTML = "EAT LUNCH";
+        } else if (hours >= 17 && hours < 23) {
+          greet.innerHTML = "Good Evening";
+          quote.innerHTML = "EAT SUPPER";
+        } else {
+          greet.innerHTML = "Good Night";
+          quote.innerHTML = "EAT DINNER";
+        }
+      }
+      Time();
+    </script>
+  </body>
+</html>

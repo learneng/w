@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practical 7 A</title>
+    <style>
+      body{
+        text-align: center;
+        font-size: 32px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let promptNum = prompt('Enter a number: ');
+      let digitStack = [];
+      let reverseDigitStack = [];
+      let reverseNum = '';
+      for(let i = 0; i < promptNum.length; i++){
+        // document.write(promptNum[i])
+        digitStack.push(promptNum[i]);
+      }
+      const length = digitStack.length;
+      for(let i = 0; i < length; i++){
+        reverseDigitStack.push(digitStack[length - i - 1]);
+        reverseNum = reverseNum + reverseDigitStack[i];
+      }
+      document.write(`Input number was: ${promptNum} <br> The reverse number is: ${reverseNum}`);
+    </script>
+    
+  </body>
+</html>

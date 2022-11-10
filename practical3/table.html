@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assymetric Table</title>
+</head>
+<body>
+    <div>
+        <center>
+        <table border>
+            <tr>
+                <td colspan=3><center>Header 1</center></td><td rowspan=2 colspan=2><center>RIGHT CORNER OF TABLE</center></td>
+            </tr>
+            <tr>
+                <td colspan=2><center>Header 2</center></td><td><center>Header 3</center></td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        <ol>
+                            <li>Lists can be table data</li>
+                            <li>Images can be tabe data</li>
+                        </ol>
+                    </center>
+                </td>
+                <td rowspan="2"><center>Two Tall</center></td>
+                <td colspan=2><center>Two colums merged</center></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><img src="img.jpeg"></td>
+                <td><center>Data Here</center></td>
+                <td><center>Caption Nested Table
+                    <table border>
+                        <tr>
+                            <td>
+                                <center>Header</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>Cell Data</center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+            <td>Multiple Line:<br>Line1<br>Line2<br>Line3</td>
+            </tr>
+            <tr>
+                <td colspan="5"><center>TABLE FOOTER</center></td>
+            </tr>
+        </table>
+        </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-8A</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: yellow;
+      }
+
+      h1,
+      h2,
+      p {
+        padding: 0 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counting Notes</h1>
+    <h2>2000 Ruppees Notes:</h2>
+    <p id="0-note">:</p>
+    <h2>500 Ruppees Notes:</h2>
+    <p id="1-note">:</p>
+
+    <h2>100 Ruppees Notes:</h2>
+    <p id="2-note"></p>
+
+    <h2>50 Ruppees Notes:</h2>
+    <p id="3-note"></p>
+
+    <h2>20 Ruppees Notes:</h2>
+    <p id="4-note"></p>
+
+    <h2>10 Ruppees Notes:</h2>
+    <p id="5-note"></p>
+
+    <h2>5 Ruppee Notes:</h2>
+    <p id="6-note"></p>
+
+    <h2>2 Ruppee Notes:</h2>
+    <p id="7-note"></p>
+
+    <h2>1 Ruppee Notes:</h2>
+    <p id="8-note"></p>
+    <script>
+      var amount = parseInt(prompt("Enter Amount: "));
+      var temp = amount;
+
+      var notes = [2000, 500, 100, 50, 20, 10, 5, 2, 1];
+
+      for (let i = 0; i < 9; i++) {
+        document.getElementById(`${i}-note`).innerHTML = Math.floor(
+          temp / notes[i]
+        );
+        temp = temp % notes[i];
+      }
+    </script>
+  </body>
+</html>
